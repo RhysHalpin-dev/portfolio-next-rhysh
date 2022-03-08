@@ -4,12 +4,6 @@ import { useState } from 'react';
 const Contact = () => {
 
 
-
-
-    const [user, setUser] = useState('');
-    const [pass, setPass] = useState('');
-
-
     return (
         <Container id='contactSection'>
             <Form >
@@ -60,7 +54,7 @@ const Container = styled.main`
       display: flex;
       align-items: center; // vertical
       justify-content: center; // horizontal
-      border: 3px solid black;
+      //border: 3px solid black;
       height: 90vh;
     `;
 

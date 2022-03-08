@@ -33,7 +33,7 @@ const Container = styled.div`
     display: flex;  
     justify-content: center;
     align-items: center;
-    border: solid 3px white;
+    //border: solid 3px white;
     width: auto;
     height: 52rem;
 

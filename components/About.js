@@ -35,9 +35,9 @@ export default About;
 
 const Container = styled.section`
     text-align: center;
-    width: 100%;
+    width: auto;
     height: 100%;
-    border: solid white 3px;
+    //border: solid white 3px;
     display: flex;
     align-items: center;
     justify-content: center;
