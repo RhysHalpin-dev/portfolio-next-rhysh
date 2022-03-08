@@ -11,8 +11,8 @@ const Contact = () => {
 
 
     return (
-        <LoginContainer>
-            <LoginForm >
+        <Container id='contactSection'>
+            <Form >
                 <h1>Get In Touch!</h1>
                 <p>Any questions? Any opportunities? drop me a message using the form below.
                     <br /> my inbox is always open!
@@ -49,14 +49,14 @@ const Contact = () => {
                     </textarea>
                 </div>
                 <input type="submit" />
-            </LoginForm>
-        </LoginContainer>
+            </Form>
+        </Container>
     );
 };
 
 export default Contact;
 
-const LoginContainer = styled.main`
+const Container = styled.main`
       display: flex;
       align-items: center; // vertical
       justify-content: center; // horizontal
@@ -64,7 +64,7 @@ const LoginContainer = styled.main`
       height: 90vh;
     `;
 
-const LoginForm = styled.form`
+const Form = styled.form`
       display: flex;
       border-radius: 1rem;
       justify-content: center; // horizontal

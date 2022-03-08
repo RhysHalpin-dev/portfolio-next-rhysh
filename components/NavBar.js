@@ -34,7 +34,7 @@ const Navbar = props => {
                 </Link>
 
             </NavMenu>
-            <Toggle>{props.theme === 'light' ? 'light Mode' : 'dark mode'}
+            <Toggle>
                 {props.theme === 'light' ? <DarkToggle onClick={() => {
                     props.setTheme('dark');
                 }} /> : <LightToggle onClick={() => {
@@ -143,6 +143,7 @@ const NavMenu = styled.div`
 const DarkToggle = styled(LightbulbFill)`
     height: 30px;
     min-width: 30px;
+    padding: .3rem;
     color: ${({ theme }) => theme.darkToggler};
     border-radius: 0.5rem;
     border: 3px solid ${({ theme }) => theme.darkToggler};;
@@ -160,7 +161,7 @@ const DarkToggle = styled(LightbulbFill)`
 const LightToggle = styled(MoonFill)`
     height: 30px;
     min-width: 30px;
-    padding: 1px;
+    padding: .3rem;
     color: ${({ theme }) => theme.darkToggler};
     border-radius: 0.5rem;
     border: 3px solid ${({ theme }) => theme.darkToggler};;
@@ -176,16 +177,7 @@ const LightToggle = styled(MoonFill)`
 `
 
 const Toggle = styled.span`
-    border: 3px solid ${({ theme }) => theme.darkToggler};
-    border-radius: 0.5rem;
-    padding:5px;
-    padding-right: 10px;
-
-    &:hover{
-    
-    color: ${({ theme }) => theme.darkHover};
-    border: 3px solid ${({ theme }) => theme.darkHover};
-    }
+   
 `
 
 const HomeIcon = styled(Home)`

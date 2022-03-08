@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Project from './ProjectCard';
+import ProjectCard from './ProjectCard';
 import styled from 'styled-components';
 import { ChevronDoubleDown } from '@styled-icons/heroicons-solid/ChevronDoubleDown';
 
@@ -14,8 +14,8 @@ const Projects = () => {
         <DownChev />
       </Title>
       <ProjectRender>
-        {totalProjects.map((details, i) => (
-          <Project key={i} details={details} />
+        {totalProjects.map((details) => (
+          <ProjectCard key={totalProjects._id} details={details} />
         ))}
       </ProjectRender>
     </Container>

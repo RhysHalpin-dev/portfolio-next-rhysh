@@ -6,8 +6,7 @@ const About = () => {
 
     return (<Container id='aboutSection'>
         <AboutSec>
-            <Title>ABOUT</Title>
-            <h2>HELLO! 👋</h2>
+            <Title>HELLO! 👋</Title>
             <p>My name is Rhys Halpin, I am a software engineer located in Newcastle upon Tyne UK , recently graduating with a First-Class Honours bachelors degree
                 in Computer Science.<br /><br></br>
                 I am Currently looking for Full stack opportunities within the Industry   that will
@@ -37,11 +36,13 @@ export default About;
 const Container = styled.section`
     text-align: center;
     width: 100%;
-    height: 58rem;
+    height: 100%;
     border: solid white 3px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top:2% ;
+    padding-bottom:2%;
     
 `
 
@@ -51,6 +52,7 @@ const AboutSec = styled.div`
     border: solid 3px ${({ theme }) => theme.text};;
     border-radius: 1rem;
     width: 50%;
+    height: 100%;
     align-items: flex-start;
     background-color: ${({ theme }) => theme.mainBackground};
 

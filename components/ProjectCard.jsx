@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 const ProjectCard = (props) => {
   const {
-    details: { name, img, description, tags, git, preview },
+    details: { _id, name, img, description, tags, git, preview },
   } = props;
-  console.log(props);
+  //console.log(props);
   return (
-    <Card>
+    <Card key={_id}>
       {/*<p className='cardName'>id: {props.details._id}</p>*/}
       <CardName>{name}</CardName>
       <CardImg> {img}</CardImg>
