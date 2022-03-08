@@ -6,7 +6,7 @@ const Contact = () => {
 
     return (
         <Container id='contactSection'>
-            <Form >
+            <Form data-netlify="true" >
                 <h1>Get In Touch!</h1>
                 <p>Any questions? Any opportunities? drop me a message using the form below.
                     <br /> my inbox is always open!
@@ -18,7 +18,7 @@ const Contact = () => {
                         name="email"
                         placeholder="Enter your name"
                         required
-                        onChange={(e) => setUser(e.target.value)}
+                    //onChange={(e) => setUser(e.target.value)}
                     />
                 </div>
                 <div>
@@ -28,7 +28,7 @@ const Contact = () => {
                         name="email"
                         placeholder="Enter your email"
                         required
-                        onChange={(e) => setPass(e.target.value)}
+                    //onChange={(e) => setPass(e.target.value)}
                     />
                 </div>
                 <div id='textAreaDiv'>
