@@ -6,7 +6,7 @@ const Contact = () => {
 
     return (
         <Container id='contactSection'>
-            <Form data-netlify="true" >
+            <Form >
                 <h1>Get In Touch!</h1>
                 <p>Any questions? Any opportunities? drop me a message using the form below.
                     <br /> my inbox is always open!
