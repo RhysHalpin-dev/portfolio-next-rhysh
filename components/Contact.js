@@ -16,7 +16,7 @@ const Contact = () => {
                     <label>Name*</label>
                     <input
                         type="text"
-                        name="email"
+                        name="name"
                         placeholder="Enter your name"
                         required
                     //onChange={(e) => setUser(e.target.value)}
