@@ -39,7 +39,7 @@ const ProjectCard = (props) => {
 export default ProjectCard;
 
 const Card = styled.div`
-  border: 3px solid black;
+  border: 3px solid ${({ theme }) => theme.text};
   padding: 10px;
   width: 325px;
   word-wrap: break-word;
@@ -61,7 +61,7 @@ const Card = styled.div`
     font-size: 1rem;
     background: ${({ theme }) => theme.highlight};
     border-radius: 5px;
-    font-weight: 600;
+    //font-weight: 600;
     color: ${({ theme }) => theme.text};
     letter-spacing: 1.42px;
   }
@@ -71,7 +71,7 @@ const CardName = styled.p`
   align-items: center;
   font-weight: 700;
 
-  border: solid white 3px;
+  //border: solid white 3px;
 `;
 
 const CardImg = styled.p`

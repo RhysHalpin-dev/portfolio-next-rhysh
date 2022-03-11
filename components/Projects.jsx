@@ -44,7 +44,8 @@ const ProjectRender = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 5em;
+  font-size: 3em;
+  letter-spacing: 1.42px;
 `;
 
 const DownChev = styled(ChevronDoubleDown)`

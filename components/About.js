@@ -12,9 +12,12 @@ const About = () => {
                 I am Currently looking for Full stack opportunities within the Industry   that will
                 allow for growth and development to my current Frontend and Backend  skill set.
             </p>
-            <h2>languages</h2><div>
-                <p>JavaScript (ES6)</p> <p>Typescript</p>
-                <p> HTML/CSS </p><p>Python</p>  <p>Node JS</p> <p>PHP</p> <p>MongoDB</p> <p>mysql</p><p>GO(golang)</p>
+            <h2>languages, Libraries & Frameworks</h2><div>
+                <p><p>JavaScript (ES6)</p> <p>Typescript</p><p>Node JS</p><p>React</p> <p>Express</p> <p>Styled-components</p></p>
+                <p><p> HTML/CSS </p><p>Python</p>   <p>PHP</p> <p>MongoDB</p> <p>mysql</p></p><p><p>GO(golang)</p><p>gorilla
+                    /
+                    mux
+                </p></p>
             </div>
             <h2>Libraries & Frameworks</h2><div>
                 <p>React</p> <p>Express</p> <p>Styled-components</p> <p>gorilla
@@ -49,7 +52,7 @@ const Container = styled.section`
 const AboutSec = styled.div`
     display: flex;
     flex-direction: column;
-    border: solid 3px ${({ theme }) => theme.text};;
+    border: solid 3px ${({ theme }) => theme.text};
     border-radius: 1rem;
     width: 50%;
     height: 100%;
@@ -76,12 +79,14 @@ const AboutSec = styled.div`
     }
     p{
         margin:10px;
+        display: flex;
+        flex-direction:row ;
         text-align: left;
         padding: 0.3rem 0.3rem ;
         margin-bottom: 1rem;
         margin-right: 0.5rem;
         font-size: 1rem;
-        font-weight: 600;
+        //font-weight: 600;
         background: ${({ theme }) => theme.highlight};
         border-radius: 5px;
 
