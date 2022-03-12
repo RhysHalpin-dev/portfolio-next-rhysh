@@ -81,6 +81,7 @@ const AboutSec = styled.div`
         margin:10px;
         display: flex;
         flex-direction:row ;
+        flex-wrap:wrap;
         text-align: left;
         padding: 0.3rem 0.3rem ;
         margin-bottom: 1rem;
