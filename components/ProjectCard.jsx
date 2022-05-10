@@ -43,27 +43,51 @@ const Card = styled.div`
   padding: 10px;
   width: 325px;
   word-wrap: break-word;
-  margin: 10px;
+  //margin: 10px;
+
   border-radius: 15px;
   font-size: medium;
-  justify-content: center;
+
   display: flex;
   flex-direction: column;
   letter-spacing: 1.42px;
   background-color: ${({ theme }) => theme.mainBackground};
-
+  align-items: center;
   p {
-    margin: 10px;
-    text-align: center;
-    padding: 0.3rem 0.3rem;
-    margin-bottom: 1rem;
-    margin-right: 0.5rem;
+    //padding: 0.3rem 0.3rem;
+    //margin-bottom: 1rem;
+    //margin-right: 0.5rem;
     font-size: 1rem;
     background: ${({ theme }) => theme.highlight};
     border-radius: 5px;
+    padding: 1%;
     //font-weight: 600;
     color: ${({ theme }) => theme.text};
     letter-spacing: 1.42px;
+  }
+  .cardPreview {
+    background: transparent;
+    button {
+      border: 0.1em solid white;
+      border-radius: 15px;
+      padding: 0.35em 1.2em;
+      background-color: transparent;
+      color: white;
+      box-sizing: border-box;
+      font-size: 13px;
+      letter-spacing: 1.42px;
+      font-weight: 600;
+      transition: all 0.2s;
+      &:hover {
+        color: #000000;
+        background-color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cardTags {
+    width: auto;
   }
 `;
 

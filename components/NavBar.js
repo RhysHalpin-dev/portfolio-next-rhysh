@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { LightningFill } from '@styled-icons/bootstrap'
+
 import { Home } from '@styled-icons/boxicons-regular/Home'
 import { Contact } from '@styled-icons/boxicons-solid/Contact'
 import { Project } from '@styled-icons/octicons/Project'

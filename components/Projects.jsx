@@ -36,11 +36,13 @@ const ProjectRender = styled.div`
   text-align: center;
   width: 60%;
   display: flex;
+  row-gap: 1rem;
+  column-gap: 1%;
   justify-content: center;
   padding: 10px;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 3px solid black;
+  //border: 3px solid black;
 `;
 
 const Title = styled.h1`

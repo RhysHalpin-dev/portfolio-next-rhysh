@@ -113,28 +113,20 @@ const Form = styled.form`
 
       }
       input[type='submit'] {
-        border: none;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    background: none;
-    cursor: pointer;
-    padding: 25px 80px;
-    display: inline-block;
-    margin: 15px 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-    outline: none;
-    position: relative;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    border: 3px solid #fff;
+        border: 0.1em solid white;
+      border-radius: 15px;
+      padding: 0.35em 1.2em;
+      background-color: transparent;
+      color: white;
+      box-sizing: border-box;
+      font-size: 13px;
+      letter-spacing: 1.42px;
+      font-weight: 600;
+      transition: all 0.2s;
     & :hover{
-        border: 3px solid #fff;
-        color: black;
-        background-color: ${({ theme }) => theme.text};
+        color: #000000;
+        background-color: #ffffff;
+        cursor: pointer;
     }
       }
     `;
