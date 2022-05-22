@@ -14,7 +14,7 @@ const Navbar = props => {
     return (
         <Nav id='Home'>
             {/*<Logo src="/images/logo.svg" />*/}
-            <CV href='CVPortfolio.docx' download>Download CV / Résumé</CV>
+            <CV href='CVRhys.pdf' download>Download CV / Résumé</CV>
             <NavMenu>
                 <Link to='Home'>
                     <HomeIcon />
