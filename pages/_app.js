@@ -24,4 +24,5 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   transition: all 0.50s linear;
   margin: 0;
+  background-image: ${({ theme }) => theme.gradient};
 }`

@@ -10,7 +10,7 @@ const About = () => {
 
     return (<Container id='aboutSection'>
         <AboutSec>
-            <Title>HELLO! 👋</Title>
+            <Title>#HELLO! 👋</Title>
             <p className="intro">My name is Rhys Halpin, I am a software engineer located in Newcastle upon Tyne UK , recently graduating with a First-Class Honours bachelors degree
                 in Computer Science.<br /><br></br>
                 I am Currently looking for Full stack opportunities within the Industry   that will
@@ -74,7 +74,7 @@ flex-direction:row ;
 //border: blue solid;
 flex-wrap: wrap;
 justify-content:center ;
-padding:1%;
+padding-left:3%;
 `
 const SkillWrapper = styled.div`
 align-items:center ;
@@ -158,7 +158,7 @@ const AboutSec = styled.div`
 const Title = styled.h1`
 
     margin:10px;
-    border: 3px white solid;
+    
     border-radius: 15px;
     padding: 1%;
     background-color: ${({ theme }) => theme.mainBackground};

@@ -1,4 +1,6 @@
 import test from '../imgs/test.png'
+import bug from '../imgs/bug.jpg'
+import covid from '../imgs/covid.png'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { TypescriptImg, GolangImg, ReactLogoImg, LogoPythonImg, MongodbImg, RaspberryPiImg, Html5Img } from '../components/imgsProjects'
@@ -13,7 +15,7 @@ const mongoImg = <MongodbImg />
 
 const totalProjects = [{
     _id: 1,
-    img: <Image alt='test' src={test} />,
+    img: <Image alt='test' src={bug} />,
     name: 'Bug tracker',
     description: `A Ticketing system capable of tracking bugs and progress across multiple software engineering projects. Users can be assinged to multiple project areas by system admins. Created using Typescript, React and Golang`,
     tags: [typeScriptImg, reactImg, golangImg],
@@ -21,7 +23,7 @@ const totalProjects = [{
     preview: ''
 }, {
     _id: 2,
-    img: <Image alt='test' src={test} />,
+    img: <Image alt='test' src={covid} />,
     name: 'Covid entry/exit system with monitoring web portal',
     description: `Attendance system capable of measuring the users temperature for granting or rejecting entry based on covid temprature thresholds. web app integration for activity
         logging, monitring and admin capabilties `,
