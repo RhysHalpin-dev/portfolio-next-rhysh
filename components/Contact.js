@@ -9,8 +9,7 @@ const Contact = () => {
             <Form name="contact" method="POST" data-netlify="true" >
                 <input type="hidden" name="form-name" value="contact" />
                 <h1>Get In Touch!</h1>
-                <p>Any questions? Any opportunities? drop me a message using the form below.
-                    <br /> my inbox is always open!
+                <p>Any questions? Any opportunities? drop me a message below!
                 </p>
                 <div>
                     <label>Name*</label>
@@ -57,29 +56,33 @@ const Container = styled.main`
       justify-content: center; // horizontal
       //border: 3px solid black;
       height: 90vh;
+      
     `;
 
 const Form = styled.form`
       display: flex;
       border-radius: 1rem;
       justify-content: center; // horizontal
+      align-items: center; // vertical
       flex-direction: column;
       border: 3px solid black;
       padding: 0.5em;
-      font-weight: 500;
-      align-items: center; // vertical
+      font-weight: 400;
+      width:40%;
       background-color: ${({ theme }) => theme.mainBackground};
       h1 {
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: 1.42px;
         position: relative;
         text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
     
         margin-left: 5px;
       }
       p {
         margin-bottom:10px;
         text-align: center;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       }
     
       div {
@@ -96,12 +99,14 @@ const Form = styled.form`
             box-sizing: border-box;
       }
       label {
-        flex-basis: 130px;
+        
         margin-right: 10px;
         margin-bottom: 10px;
+        
       }
       textarea{
           width: 100%;
+    resize: none;
           -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;

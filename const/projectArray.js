@@ -1,55 +1,13 @@
 import test from '../imgs/test.png'
 import styled from 'styled-components'
 import Image from 'next/image'
-import { Typescript } from '@styled-icons/simple-icons/Typescript'
-import { ReactLogo } from '@styled-icons/boxicons-logos/ReactLogo'
-import { LogoPython } from '@styled-icons/ionicons-solid/LogoPython'
-import { Mongodb } from '@styled-icons/simple-icons/Mongodb'
-import { RaspberryPi } from '@styled-icons/fa-brands/RaspberryPi'
-import { Html5 } from '@styled-icons/typicons/Html5'
-import { Goland } from '@styled-icons/simple-icons/Goland'
-
-const TypescriptImg = styled(Typescript)`
-  color: #007acc;
-  background-color: #ffffff;
-  height: 50px;
-`
-const GolangImg = styled(Goland)`
-    height: 50px;
-    
-    background-color: #01ADD8;
-
-`
-const ReactLogoImg = styled(ReactLogo)`
-    color:#61DBFB;
-    height: 50px;
-`
-
-const LogoPythonImg = styled(LogoPython)`
-    height: 50px;
-
-`
-const MongodbImg = styled(Mongodb)`
-    color: #4DB33D;
-    height: 50px;
-`
-
-const RaspberryPiImg = styled(RaspberryPi)`
-    color: #C51A4A;
-    height: 50px;
-`
-
-const Html5Img = styled(Html5)`
-    color: #e34c26;
-    height: 50px;
-`
+import { TypescriptImg, GolangImg, ReactLogoImg, LogoPythonImg, MongodbImg, RaspberryPiImg, Html5Img } from '../components/imgsProjects'
 
 const golangImg = <GolangImg />
 const reactImg = <ReactLogoImg />;
 const pythonImg = <LogoPythonImg />;
 const raspImg = <RaspberryPiImg />;
 const htmlImg = <Html5Img />;
-const tailwindImg = null;
 const typeScriptImg = <TypescriptImg />;
 const mongoImg = <MongodbImg />
 
@@ -75,7 +33,7 @@ const totalProjects = [{
     img: <Image alt='test' src={test} />,
     name: 'This site :D',
     description: 'This Front-end portfolio site developed using Next JS and styled components featuring dark mode accessibility and Résumé',
-    tags: [htmlImg, reactImg, tailwindImg],
+    tags: [htmlImg, reactImg],
     git: 'https://github.com/RhysHalpin-dev',
     preview: ''
 }, {

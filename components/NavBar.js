@@ -14,7 +14,7 @@ const Navbar = props => {
     return (
         <Nav id='Home'>
             {/*<Logo src="/images/logo.svg" />*/}
-            <CV href='CVRhys.pdf' download>Download CV / Résumé</CV>
+            <CV href='CVRhys.pdf' download>CV / Résumé</CV>
             <NavMenu>
                 <Link to='Home'>
                     <HomeIcon />
@@ -55,7 +55,7 @@ const Nav = styled.nav`
     padding: 0 36px;
     overflow-x: hidden;
     max-width: 100%;
-    
+    font-family: 'Roboto', sans-serif;
     border-bottom: 3px solid ${({ theme }) => theme.text};;
 
     

@@ -12,7 +12,7 @@ const ProjectCard = (props) => {
       <CardName>{name}</CardName>
       <CardImg> {img}</CardImg>
       <p className="cardDesc">{description}</p>
-      <span className="span-tag">Tech:</span>
+      {/*<span className="span-tag">Tech:</span>*/}
       <p className="cardTags"> {tags}</p>
       <p className="cardPreview">
         {git !== '' ? (
@@ -50,7 +50,7 @@ const Card = styled.div`
 
   display: flex;
   flex-direction: column;
-  letter-spacing: 1.42px;
+  font-weight: 500;
   background-color: ${({ theme }) => theme.mainBackground};
   align-items: center;
   p {
@@ -58,12 +58,11 @@ const Card = styled.div`
     //margin-bottom: 1rem;
     //margin-right: 0.5rem;
     font-size: 1rem;
-    background: ${({ theme }) => theme.highlight};
+    //background: ${({ theme }) => theme.highlight};
     border-radius: 5px;
     padding: 1%;
     //font-weight: 600;
-    color: ${({ theme }) => theme.text};
-    letter-spacing: 1.42px;
+    //color: ${({ theme }) => theme.text};
   }
   .cardPreview {
     background: transparent;
@@ -94,6 +93,8 @@ const Card = styled.div`
 const CardName = styled.p`
   align-items: center;
   font-weight: 700;
+  color: #ec5db5;
+  background-color: transparent;
 
   //border: solid white 3px;
 `;

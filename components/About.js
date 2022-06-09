@@ -1,5 +1,9 @@
 import React from "react";
 import styled from 'styled-components'
+import { Typescript } from '@styled-icons/simple-icons/Typescript'
+import { Goland } from '@styled-icons/simple-icons/Goland'
+import { ReactLogo } from '@styled-icons/boxicons-logos/ReactLogo'
+import { TypescriptImg, GolangImg, ReactLogoImg, LogoPythonImg, MongodbImg, RaspberryPiImg, Html5Img, NodejsImg, MysqlImg, AwsImg, GitImg } from '../components/imgsAbout'
 
 const About = () => {
 
@@ -7,37 +11,92 @@ const About = () => {
     return (<Container id='aboutSection'>
         <AboutSec>
             <Title>HELLO! 👋</Title>
-            <p>My name is Rhys Halpin, I am a software engineer located in Newcastle upon Tyne UK , recently graduating with a First-Class Honours bachelors degree
+            <p className="intro">My name is Rhys Halpin, I am a software engineer located in Newcastle upon Tyne UK , recently graduating with a First-Class Honours bachelors degree
                 in Computer Science.<br /><br></br>
                 I am Currently looking for Full stack opportunities within the Industry   that will
-                allow for growth and development to my current Frontend and Backend  skill set.
+                allow for growth and development to my current Front and Backend  skill set.
             </p>
-            <h2>languages, Libraries & Frameworks</h2><div>
-                <p><p>JavaScript (ES6)</p> <p>Typescript</p><p>Node JS</p><p>React</p> <p>Express</p> <p>Styled-components</p></p>
-                <p><p> HTML/CSS </p><p>Python</p>   <p>PHP</p> <p>MongoDB</p> <p>mysql</p></p><p><p>GO(golang)</p><p>gorilla
-                    /
-                    mux
-                </p></p>
-            </div>
-            <h2>Libraries & Frameworks</h2><div>
-                <p>React</p> <p>Express</p> <p>Styled-components</p> <p>gorilla
-                    /
-                    mux
-                </p>
-            </div>
-            <h3>Tools & Platforms</h3>
-            <div>
-                <p>Git</p> <p>GitHub</p> <p>AWS EC2</p> <p>Azure Compute</p>
-            </div>
-
+            <h1># Tech I&apos;ve worked with</h1>
+            <SkillList>
+                <SkillWrapper>
+                    <TypescriptImg></TypescriptImg>
+                    <p>Typescript</p>
+                </SkillWrapper>
+                <SkillWrapper>
+                    <GolangImg></GolangImg>
+                    <p>Go (golang)</p>
+                </SkillWrapper>
+                <SkillWrapper>
+                    <TypescriptImg></TypescriptImg>
+                    <p>Next JS</p>
+                </SkillWrapper>
+                <SkillWrapper>
+                    <ReactLogoImg ></ReactLogoImg >
+                    <p>ReactJS</p>
+                </SkillWrapper>
+                <SkillWrapper>
+                    <NodejsImg></NodejsImg>
+                    <p>Node JS</p>
+                </SkillWrapper>
+                <SkillWrapper>
+                    <MongodbImg></MongodbImg>
+                    <p>Mongodb</p>
+                </SkillWrapper>
+                <SkillWrapper>
+                    <MysqlImg></MysqlImg>
+                    <p>Mysql</p>
+                </SkillWrapper>
+                <SkillWrapper>
+                    <LogoPythonImg></LogoPythonImg>
+                    <p>Python</p>
+                </SkillWrapper>
+            </SkillList>
+            <h1># Tools & Platforms</h1>
+            <SkillList>
+                <SkillWrapper>
+                    <GitImg></GitImg>
+                    <p>Git</p>
+                </SkillWrapper>
+                <SkillWrapper>
+                    <AwsImg></AwsImg>
+                    <p>Aws EC2</p>
+                </SkillWrapper>
+            </SkillList>
         </AboutSec>
     </Container >)
 }
 
 export default About;
 
+const SkillList = styled.div`
+display:flex ;
+flex-direction:row ;
+//border: blue solid;
+flex-wrap: wrap;
+justify-content:center ;
+padding:1%;
+`
+const SkillWrapper = styled.div`
+align-items:center ;
+display: flex;
+width: 50%;
+align-items: center;
+gap: 1rem;
+//border: 3px white solid
+p{
+        
+        margin-left:0;
+        margin-right:0;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 500; 
+        
+        
+    }
+`
+
 const Container = styled.section`
-    text-align: center;
+    
     width: auto;
     height: 100%;
     //border: solid white 3px;
@@ -54,18 +113,36 @@ const AboutSec = styled.div`
     flex-direction: column;
     border: solid 3px ${({ theme }) => theme.text};
     border-radius: 1rem;
-    width: 50%;
+    width: 40%;
     height: 100%;
     align-items: flex-start;
     background-color: ${({ theme }) => theme.mainBackground};
 
-    div{
+    /*div{
         display: flex;
         flex-direction: row;
         width: 100%;
         align-items: flex-start;
         flex-wrap: wrap;
         white-space:nowrap;
+    }*/
+    h1{
+        margin-left:1rem;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+    }
+    .intro{
+        
+        margin-left:1rem;
+        margin-right:1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 500; 
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        
     }
     h2{
         margin: 10px;
@@ -77,26 +154,6 @@ const AboutSec = styled.div`
         margin-bottom: -10px;
         letter-spacing: 1.42px;
     }
-    p{
-        margin:10px;
-        display: flex;
-        flex-direction:row ;
-        flex-wrap:wrap;
-        text-align: left;
-        padding: 0.3rem 0.3rem ;
-        margin-bottom: 1rem;
-        margin-right: 0.5rem;
-        font-size: 1rem;
-        //font-weight: 600;
-        background: ${({ theme }) => theme.highlight};
-        border-radius: 5px;
-
-        color: ${({ theme }) => theme.text};
-        letter-spacing: 1.42px;
-        
-        
-    }
-
 `
 
 const Title = styled.h1`
