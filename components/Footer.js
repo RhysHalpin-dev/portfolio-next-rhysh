@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Footer = () => {
     return (
-        <Container> © 2021 Rhys Halpin. All Rights Reserved.</Container>
+        <Container> ©2022 Rhys Halpin. All Rights Reserved.</Container>
     )
 }
 

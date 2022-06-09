@@ -41,7 +41,7 @@ export default ProjectCard;
 const Card = styled.div`
   border: 3px solid ${({ theme }) => theme.text};
   padding: 10px;
-  width: 325px;
+  width: 18.75rem;
   word-wrap: break-word;
   //margin: 10px;
 
@@ -53,10 +53,20 @@ const Card = styled.div`
   font-weight: 500;
   background-color: ${({ theme }) => theme.mainBackground};
   align-items: center;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+  h1 {
+    font-size: 1rem;
+  }
   p {
     //padding: 0.3rem 0.3rem;
     //margin-bottom: 1rem;
     //margin-right: 0.5rem;
+
     font-size: 1rem;
     //background: ${({ theme }) => theme.highlight};
     border-radius: 5px;
@@ -90,7 +100,7 @@ const Card = styled.div`
   }
 `;
 
-const CardName = styled.p`
+const CardName = styled.h1`
   align-items: center;
   font-weight: 700;
   color: #ec5db5;

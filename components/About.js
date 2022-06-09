@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Typescript } from '@styled-icons/simple-icons/Typescript'
 import { Goland } from '@styled-icons/simple-icons/Goland'
 import { ReactLogo } from '@styled-icons/boxicons-logos/ReactLogo'
-import { TypescriptImg, GolangImg, ReactLogoImg, LogoPythonImg, MongodbImg, RaspberryPiImg, Html5Img, NodejsImg, MysqlImg, AwsImg, GitImg } from '../components/imgsAbout'
+import { TypescriptImg, GolangImg, ReactLogoImg, LogoPythonImg, MongodbImg, RaspberryPiImg, Html5Img, NodejsImg, MysqlImg, AwsImg, GitImg, NextJsImg } from '../components/imgsAbout'
 
 const About = () => {
 
@@ -27,7 +27,7 @@ const About = () => {
                     <p>Go (golang)</p>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <TypescriptImg></TypescriptImg>
+                    <NextJsImg></NextJsImg>
                     <p>Next JS</p>
                 </SkillWrapper>
                 <SkillWrapper>
@@ -84,14 +84,11 @@ align-items: center;
 gap: 1rem;
 //border: 3px white solid
 p{
-        
         margin-left:0;
         margin-right:0;
         margin-bottom: 1rem;
         font-size: 1rem;
         font-weight: 500; 
-        
-        
     }
 `
 
@@ -117,7 +114,9 @@ const AboutSec = styled.div`
     height: 100%;
     align-items: flex-start;
     background-color: ${({ theme }) => theme.mainBackground};
-
+    @media (max-width: 1024px) {width: 60%;}
+    @media (max-width: 768px) {width:70%;}
+    @media (max-width: 640px) { width:90% }
     /*div{
         display: flex;
         flex-direction: row;
