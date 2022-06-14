@@ -94,6 +94,7 @@ const Nav = styled.nav`
     font-family: 'Roboto', sans-serif;
     border-bottom: 3px solid ${({ theme }) => theme.text};;
     @media (max-width: 768px) {
+        width:100%;
     justify-content: space-between;
 }
     
@@ -128,7 +129,7 @@ const NavMenu = styled.div`
     @media (max-width: 768px) {
         background: #090b13;
         margin-left:-10%;
-        margin-top: 12.5rem ;
+        margin-top: 40.5% ;
         position:absolute ;
         flex-direction:column;
         align-items:flex-start;
