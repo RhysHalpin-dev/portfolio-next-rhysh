@@ -43,6 +43,9 @@ const ProjectRender = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   //border: 3px solid black;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.h1`

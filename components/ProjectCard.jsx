@@ -43,21 +43,15 @@ const Card = styled.div`
   padding: 10px;
   width: 18.75rem;
   word-wrap: break-word;
-  //margin: 10px;
-
   border-radius: 15px;
   font-size: medium;
-
   display: flex;
   flex-direction: column;
   font-weight: 500;
   background-color: ${({ theme }) => theme.mainBackground};
   align-items: center;
   @media (max-width: 768px) {
-    width: 90%;
-  }
-  @media (max-width: 640px) {
-    width: 100%;
+    width: 85%;
   }
   h1 {
     font-size: 1rem;

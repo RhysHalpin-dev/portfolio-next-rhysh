@@ -7,6 +7,13 @@ import { Mongodb } from '@styled-icons/simple-icons/Mongodb'
 import { RaspberryPi } from '@styled-icons/fa-brands/RaspberryPi'
 import { Html5 } from '@styled-icons/typicons/Html5'
 import { Goland } from '@styled-icons/simple-icons/Goland'
+import { Php } from '@styled-icons/simple-icons/Php'
+
+const PhpImg = styled(Php)`
+  color: #787CB5;
+  background-color: transparent;
+  height: 3rem;
+`
 
 const TypescriptImg = styled(Typescript)`
   color: #007acc;
@@ -44,4 +51,4 @@ const Html5Img = styled(Html5)`
     height: 3rem;
 `
 
-export { TypescriptImg, GolangImg, ReactLogoImg, LogoPythonImg, MongodbImg, RaspberryPiImg, Html5Img, };
+export { TypescriptImg, GolangImg, ReactLogoImg, LogoPythonImg, MongodbImg, RaspberryPiImg, Html5Img, PhpImg };

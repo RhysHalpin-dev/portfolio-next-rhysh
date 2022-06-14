@@ -3,7 +3,7 @@ import bug from '../imgs/bug.jpg'
 import covid from '../imgs/covid.png'
 import styled from 'styled-components'
 import Image from 'next/image'
-import { TypescriptImg, GolangImg, ReactLogoImg, LogoPythonImg, MongodbImg, RaspberryPiImg, Html5Img } from '../components/imgsProjects'
+import { TypescriptImg, GolangImg, ReactLogoImg, LogoPythonImg, MongodbImg, RaspberryPiImg, Html5Img, PhpImg } from '../components/imgsProjects'
 
 const golangImg = <GolangImg />
 const reactImg = <ReactLogoImg />;
@@ -12,6 +12,7 @@ const raspImg = <RaspberryPiImg />;
 const htmlImg = <Html5Img />;
 const typeScriptImg = <TypescriptImg />;
 const mongoImg = <MongodbImg />
+const phpImg = <PhpImg />
 
 const totalProjects = [{
     _id: 1,
@@ -45,6 +46,14 @@ const totalProjects = [{
     description: `Online code compiler and commenter created using Typescript alongside React. 
     Basic code can be compiled and viewed within the browser using ecmascript 6, future language support TBD`,
     tags: [reactImg, typeScriptImg],
+    git: 'https://github.com/RhysHalpin-dev',
+    preview: ''
+}, {
+    _id: 4,
+    img: <Image alt='test' src={test} />,
+    name: 'Academic Conference App',
+    description: `Web application, presenting information about an academic conference including Schedule, content and Authors attending the . Consists of a web API created using PHP and a Front end React JS application. SQlite`,
+    tags: [reactImg, phpImg],
     git: 'https://github.com/RhysHalpin-dev',
     preview: ''
 }]
