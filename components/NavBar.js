@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import { Home } from '@styled-icons/boxicons-regular/Home'
@@ -8,14 +8,47 @@ import { Aboutdotme } from '@styled-icons/simple-icons/Aboutdotme'
 import { MoonFill } from '@styled-icons/bootstrap/MoonFill'
 import { Link } from 'react-scroll'
 import { LightbulbFill } from '@styled-icons/bootstrap/LightbulbFill'
+import Burger from './Burger/Burger';
+import { useState } from 'react'
+import { useMediaQuery } from '../hooks/useMediaQuery'
+
+
 
 const Navbar = props => {
+    const isBreakpoint = useMediaQuery(768)
+    const [menu, setMenu] = useState(false)
+
 
     return (
         <Nav id='Home'>
-            {/*<Logo src="/images/logo.svg" />*/}
-            <CV href='CVRhys.pdf' download>CV / Résumé</CV>
-            <NavMenu>
+            {!isBreakpoint ? (<CV href='CVRhys.pdf' download>CV / Résumé</CV>) : (null)}
+            {isBreakpoint ? (
+
+                <Burger menu={menu} setMenu={setMenu} />
+
+            ) : (
+
+                <NavMenu>
+
+                    <Link to='Home'>
+                        <HomeIcon />
+                        <span >HOME</span>
+                    </Link>
+                    <Link to='aboutSection'>
+                        <AboutIcon />
+                        <span>ABOUT</span>
+                    </Link>
+                    <Link to='projectSection'>
+                        <ProjectIcon />
+                        <span>PROJECTS</span>
+                    </Link>
+                    <Link to='contactSection'>
+                        <ContactIcon />
+                        <span>CONTACT</span>
+                    </Link>
+
+                </NavMenu>
+            )}{menu ? <NavMenu>
                 <Link to='Home'>
                     <HomeIcon />
                     <span >HOME</span>
@@ -33,7 +66,10 @@ const Navbar = props => {
                     <span>CONTACT</span>
                 </Link>
 
-            </NavMenu>
+            </NavMenu> : null}
+
+
+
             <Toggle>
                 {props.theme === 'light' ? <DarkToggle onClick={() => {
                     props.setTheme('dark');
@@ -57,10 +93,11 @@ const Nav = styled.nav`
     max-width: 100%;
     font-family: 'Roboto', sans-serif;
     border-bottom: 3px solid ${({ theme }) => theme.text};;
-
+    @media (max-width: 768px) {
+    justify-content: space-between;
+}
     
     `
-
 const CV = styled.a`
     font-size: 13px;
     letter-spacing: 1.42px;
@@ -82,18 +119,30 @@ const CV = styled.a`
 
 `
 
-const Logo = styled.img`
-    width: 80px;
-
-    `
 const NavMenu = styled.div`
     display: flex;
     flex: 1;
     margin-left: 25px;
     align-items: center;
     max-width: 100%;
+    @media (max-width: 768px) {
+        background: #090b13;
+        margin-left:-10%;
+        margin-top: 12.5rem ;
+        position:absolute ;
+        flex-direction:column;
+        align-items:flex-start;
+        border-radius: 0.5rem;
+        border-top-left-radius:0;
+        border-top-right-radius:0;
+        border-right: 3px solid;
+        border-left: 3px solid;
+        border-bottom: 3px solid;
+        padding:1%;
+}
 
     a {
+        margin-top:0.5rem;
         display: flex;
         align-items: center;
         padding: 0 12px;
@@ -177,6 +226,7 @@ const LightToggle = styled(MoonFill)`
 `
 
 const Toggle = styled.span`
+
    
 `
 
