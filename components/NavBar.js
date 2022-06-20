@@ -18,12 +18,10 @@ const Navbar = props => {
     const isBreakpoint = useMediaQuery(768)
     const [menu, setMenu] = useState(false)
 
-
     return (
         <Nav id='Home'>
             {!isBreakpoint ? (<CV href='CVRhys.pdf' download>CV / Résumé</CV>) : (null)}
             {isBreakpoint ? (
-
                 <Burger menu={menu} setMenu={setMenu} />
 
             ) : (
@@ -94,7 +92,6 @@ const Nav = styled.nav`
     font-family: 'Roboto', sans-serif;
     border-bottom: 3px solid ${({ theme }) => theme.text};;
     @media (max-width: 768px) {
-        width:100%;
     justify-content: space-between;
 }
     
@@ -126,19 +123,21 @@ const NavMenu = styled.div`
     margin-left: 25px;
     align-items: center;
     max-width: 100%;
-    @media (max-width: 768px) {
+    @media all and (max-width: 768px) and (max-height: 768px) { 
         background: #090b13;
-        margin-left:-10%;
-        margin-top: 40.5% ;
+        margin-left:-5%;
+        margin-top: 13.1rem ;
         position:absolute ;
         flex-direction:column;
         align-items:flex-start;
-        border-radius: 0.5rem;
+        
         border-top-left-radius:0;
         border-top-right-radius:0;
+        border-bottom-right-radius:1rem ;
         border-right: 3px solid;
-        border-left: 3px solid;
+        
         border-bottom: 3px solid;
+        border-top: 3px solid;
         padding:1%;
 }
 
