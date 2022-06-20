@@ -126,6 +126,7 @@ const AboutSec = styled.div`
         white-space:nowrap;
     }*/
     h1{
+        color: ${({ theme }) => theme.heading};
         margin-left:1rem;
         margin-bottom: 0;
         font-size: 1.5rem;
@@ -156,14 +157,11 @@ const AboutSec = styled.div`
 `
 
 const Title = styled.h1`
-
     margin:10px;
-    
-    border-radius: 15px;
     padding: 1%;
     background-color: ${({ theme }) => theme.mainBackground};
     letter-spacing: 1.42px;
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.heading};
 
 
 `

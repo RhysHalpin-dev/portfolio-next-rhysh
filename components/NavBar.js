@@ -91,7 +91,7 @@ const Nav = styled.nav`
     max-width: 100%;
     font-family: 'Roboto', sans-serif;
     border-bottom: 3px solid ${({ theme }) => theme.text};;
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
     justify-content: space-between;
 }
     
@@ -123,7 +123,7 @@ const NavMenu = styled.div`
     margin-left: 25px;
     align-items: center;
     max-width: 100%;
-    @media all and (max-width: 768px) and (max-height: 768px) { 
+    @media all and (max-width: 768px)  { 
         background: #090b13;
         margin-left:-5%;
         margin-top: 13.1rem ;

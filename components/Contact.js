@@ -72,9 +72,10 @@ const Form = styled.form`
       width:40%;
       background-color: ${({ theme }) => theme.mainBackground};
       @media (max-width: 1024px) {width: 60%;}
-    @media (max-width: 768px) {width:70%;}
-    @media (max-width: 640px) { width:90% }
+      @media (max-width: 768px) {width:70%;}
+      @media (max-width: 640px) { width:90% }
       h1 {
+        color: ${({ theme }) => theme.heading};
         font-weight: 700;
         letter-spacing: 1.42px;
         position: relative;
@@ -135,11 +136,11 @@ const Form = styled.form`
       input[type='submit'] {
         margin: auto;
         width:40%;
-        border: 0.1em solid white;
+        border: 0.1em solid ${({ theme }) => theme.border};
       border-radius: 15px;
       padding: 0.35em 1.2em;
       background-color: transparent;
-      color: white;
+      color: ${({ theme }) => theme.text};;
       box-sizing: border-box;
       font-size: 13px;
       letter-spacing: 1.42px;

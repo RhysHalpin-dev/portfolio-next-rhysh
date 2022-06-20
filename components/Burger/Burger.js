@@ -4,18 +4,18 @@ import { useState } from 'react';
 
 const Burger = (props) => {
 
-    const showDropDownMenu = () => {
-        props.menu == true ? props.setMenu(false) : props.setMenu(true)
-    }
+  const showDropDownMenu = () => {
+    props.menu == true ? props.setMenu(false) : props.setMenu(true)
+  }
 
-    return (
-        <StyledBurger onClick={showDropDownMenu} >
-            <div />
-            <div />
-            <div />
-        </StyledBurger>
+  return (
+    <StyledBurger onClick={showDropDownMenu} >
+      <div />
+      <div />
+      <div />
+    </StyledBurger>
 
-    )
+  )
 }
 
 export default Burger;

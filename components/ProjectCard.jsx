@@ -49,12 +49,14 @@ const Card = styled.div`
   flex-direction: column;
   font-weight: 500;
   background-color: ${({ theme }) => theme.mainBackground};
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   align-items: center;
   @media (max-width: 768px) {
     width: 85%;
   }
   h1 {
-    font-size: 1rem;
+    color: ${({ theme }) => theme.heading};
+    font-size: 1.5rem;
   }
   p {
     //padding: 0.3rem 0.3rem;
@@ -71,11 +73,11 @@ const Card = styled.div`
   .cardPreview {
     background: transparent;
     button {
-      border: 0.1em solid white;
+      border: 0.1em solid ${({ theme }) => theme.border};
       border-radius: 15px;
       padding: 0.35em 1.2em;
       background-color: transparent;
-      color: white;
+      color: ${({ theme }) => theme.text};
       box-sizing: border-box;
       font-size: 13px;
       letter-spacing: 1.42px;

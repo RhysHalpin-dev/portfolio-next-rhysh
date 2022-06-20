@@ -39,7 +39,7 @@ const totalProjects = [{
     tags: [htmlImg, reactImg],
     git: 'https://github.com/RhysHalpin-dev',
     preview: ''
-}, {
+}, /*{
     _id: 4,
     img: <Image alt='test' src={test} />,
     name: 'online IDE',
@@ -48,13 +48,13 @@ const totalProjects = [{
     tags: [reactImg, typeScriptImg],
     git: 'https://github.com/RhysHalpin-dev',
     preview: ''
-}, {
+},*/ {
     _id: 4,
     img: <Image alt='test' src={test} />,
     name: 'Academic Conference App',
     description: `Web application, presenting information about an academic conference including Schedule, content and Authors attending the . Consists of a web API created using PHP and a Front end React JS application. SQlite`,
     tags: [reactImg, phpImg],
-    git: 'https://github.com/RhysHalpin-dev',
+    git: 'https://github.com/RhysHalpin-dev/KF6012-web-app',
     preview: ''
 }]
 
