@@ -11,12 +11,13 @@ import { LightbulbFill } from '@styled-icons/bootstrap/LightbulbFill'
 import Burger from './Burger/Burger';
 import { useState } from 'react'
 import { useMediaQuery } from '../hooks/useMediaQuery'
-
+import { Menu } from './Menu/Menu';
 
 
 const Navbar = props => {
     const isBreakpoint = useMediaQuery(768)
     const [menu, setMenu] = useState(false)
+
 
     return (
         <Nav id='Home'>
@@ -26,7 +27,7 @@ const Navbar = props => {
 
             ) : (
 
-                <NavMenu>
+                < NavMenu >
 
                     <Link to='Home'>
                         <HomeIcon />
@@ -46,25 +47,8 @@ const Navbar = props => {
                     </Link>
 
                 </NavMenu>
-            )}{menu ? <NavMenu>
-                <Link to='Home'>
-                    <HomeIcon />
-                    <span >HOME</span>
-                </Link>
-                <Link to='aboutSection'>
-                    <AboutIcon />
-                    <span>ABOUT</span>
-                </Link>
-                <Link to='projectSection'>
-                    <ProjectIcon />
-                    <span>PROJECTS</span>
-                </Link>
-                <Link to='contactSection'>
-                    <ContactIcon />
-                    <span>CONTACT</span>
-                </Link>
-
-            </NavMenu> : null}
+            )
+            }{menu ? <Menu /> : null}
 
 
 
@@ -75,13 +59,14 @@ const Navbar = props => {
                     props.setTheme('light');
                 }} />}
             </Toggle>
-        </Nav>
+        </Nav >
     )
 }
 
 export default Navbar
 
 const Nav = styled.nav`
+z-index:4 ;
     height: 70px;
     background: #090b13;
     display: flex;
@@ -93,6 +78,9 @@ const Nav = styled.nav`
     border-bottom: 3px solid ${({ theme }) => theme.text};;
     @media (max-width: 1000px) {
     justify-content: space-between;
+    position:fixed;
+    width:92% ;
+    padding: 0 5% ;
 }
     
     `
@@ -123,23 +111,7 @@ const NavMenu = styled.div`
     margin-left: 25px;
     align-items: center;
     max-width: 100%;
-    @media all and (max-width: 768px)  { 
-        background: #090b13;
-        margin-left:-5%;
-        margin-top: 13.1rem ;
-        position:absolute ;
-        flex-direction:column;
-        align-items:flex-start;
-        
-        border-top-left-radius:0;
-        border-top-right-radius:0;
-        border-bottom-right-radius:1rem ;
-        border-right: 3px solid;
-        
-        border-bottom: 3px solid;
-        border-top: 3px solid;
-        padding:1%;
-}
+
 
     a {
         margin-top:0.5rem;

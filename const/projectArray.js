@@ -1,6 +1,7 @@
 import test from '../imgs/test.png'
 import bug from '../imgs/bug.jpg'
 import covid from '../imgs/covid.png'
+import portfolio from '../imgs/portfolio.png'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { TypescriptImg, GolangImg, ReactLogoImg, LogoPythonImg, MongodbImg, RaspberryPiImg, Html5Img, PhpImg } from '../components/imgsProjects'
@@ -33,7 +34,7 @@ const totalProjects = [{
     preview: ''
 }, {
     _id: 3,
-    img: <Image alt='test' src={test} />,
+    img: <Image alt='test' src={portfolio} />,
     name: 'This site :D',
     description: 'This Front-end portfolio site developed using Next JS and styled components featuring dark mode accessibility and Résumé',
     tags: [htmlImg, reactImg],
