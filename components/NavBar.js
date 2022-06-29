@@ -11,7 +11,7 @@ import { LightbulbFill } from '@styled-icons/bootstrap/LightbulbFill'
 import Burger from './Burger/Burger';
 import { useState } from 'react'
 import { useMediaQuery } from '../hooks/useMediaQuery'
-import { Menu } from './Menu/Menu';
+import { DropMenu } from './Menu/Menu';
 
 
 const Navbar = props => {
@@ -48,7 +48,7 @@ const Navbar = props => {
 
                 </NavMenu>
             )
-            }{menu ? <Menu /> : null}
+            }{menu ? <DropMenu /> : null}
 
 
 

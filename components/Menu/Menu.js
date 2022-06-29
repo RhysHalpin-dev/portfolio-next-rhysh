@@ -6,7 +6,7 @@ import { Aboutdotme } from '@styled-icons/simple-icons/Aboutdotme'
 import { Link } from 'react-scroll'
 import { useState } from 'react'
 import styled from 'styled-components'
-const Menu = (props) => {
+const DropMenu = (props) => {
     return (
         <NavMenu>
 
@@ -32,7 +32,7 @@ const Menu = (props) => {
 
 }
 
-export { Menu }
+export { DropMenu }
 
 const NavMenu = styled.div`
         background: #090b13;
