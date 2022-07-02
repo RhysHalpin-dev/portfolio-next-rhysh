@@ -10,12 +10,12 @@ import { Link } from 'react-scroll'
 import { LightbulbFill } from '@styled-icons/bootstrap/LightbulbFill'
 import Burger from './Burger/Burger';
 import { useState } from 'react'
-import { useMediaQuery } from '../hooks/useMediaQuery'
+import { useMediaWidth } from '../hooks/useMediaQuery'
 import { DropMenu } from './Menu/Menu';
 
 
 const Navbar = props => {
-    const isBreakpoint = useMediaQuery(768)
+    const isBreakpoint = useMediaWidth(768)
     const [menu, setMenu] = useState(false)
 
 
@@ -29,19 +29,19 @@ const Navbar = props => {
 
                 < NavMenu >
 
-                    <Link to='Home'>
+                    <Link to='mainSection' smooth={true} >
                         <HomeIcon />
                         <span >HOME</span>
                     </Link>
-                    <Link to='aboutSection'>
+                    <Link to='aboutSection' smooth={true}>
                         <AboutIcon />
                         <span>ABOUT</span>
                     </Link>
-                    <Link to='projectSection'>
+                    <Link to='projectSection' smooth={true}>
                         <ProjectIcon />
                         <span>PROJECTS</span>
                     </Link>
-                    <Link to='contactSection'>
+                    <Link to='contactSection' smooth={true}>
                         <ContactIcon />
                         <span>CONTACT</span>
                     </Link>

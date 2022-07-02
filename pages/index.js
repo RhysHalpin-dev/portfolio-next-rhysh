@@ -7,10 +7,22 @@ import Projects from '../components/Projects'
 import Main from '../components/Main'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import ScrollToTop from '../components/ScrollToTop'
+import { useEffect, useState } from "react";
 
 export default function Home(props) {
+  const [scrollY, setScrollY] = useState(0);
 
-  //console.log(props)
+  useEffect(() => {
+    const options = { passive: true };
+    const scroll = () => {
+      const { scrollY } = window;
+      setScrollY(scrollY);
+    };
+    document.addEventListener("scroll", scroll, options);
+    // remove event
+    () => document.removeEventListener("scroll", scroll, options);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -23,12 +35,15 @@ export default function Home(props) {
 
 
       </Head>
+
       <Navbar theme={props.theme} setTheme={props.setTheme} />
       <Main />
       <About />
       <Projects />
       <Contact />
       <Footer />
+      {scrollY > 750 ? <ScrollToTop /> : null}
+
     </div>
   )
 }
