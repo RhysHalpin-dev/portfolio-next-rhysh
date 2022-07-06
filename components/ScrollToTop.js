@@ -16,6 +16,7 @@ const ArrowUp = styled(ArrowCircleUp)`
     border-radius:3rem ;
     border-style:solid ;
     border-color:black ;
+    color:white ;
     background-color:black ;
     width:auto ;
     
@@ -31,8 +32,16 @@ const Container = styled.div`
     height: 5rem;
     z-index: 4;
     cursor:pointer ;
+    -webkit-animation: fadein 4s;
+    @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
     @media (max-width: 1000px) {
         left: 80%;
+
 }
+
+
    
 `

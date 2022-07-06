@@ -29,15 +29,15 @@ const Navbar = props => {
 
                 < NavMenu >
 
-                    <Link to='mainSection' smooth={true} >
+                    <Link to='mainSection' smooth={true} offset={-100} >
                         <HomeIcon />
                         <span >HOME</span>
                     </Link>
-                    <Link to='aboutSection' smooth={true}>
+                    <Link to='aboutSection' smooth={true} offset={-100}>
                         <AboutIcon />
                         <span>ABOUT</span>
                     </Link>
-                    <Link to='projectSection' smooth={true}>
+                    <Link to='projectSection' smooth={true} offset={-100}>
                         <ProjectIcon />
                         <span>PROJECTS</span>
                     </Link>
@@ -66,14 +66,15 @@ const Navbar = props => {
 export default Navbar
 
 const Nav = styled.nav`
-z-index:4 ;
+    z-index:4 ;
+    position: fixed;
     height: 70px;
     background: #090b13;
     display: flex;
     align-items: center;
     padding: 0 36px;
     overflow-x: hidden;
-    max-width: 100%;
+    width:97% ;
     font-family: 'Roboto', sans-serif;
     border-bottom: 3px solid ${({ theme }) => theme.text};;
     @media (max-width: 1000px) {

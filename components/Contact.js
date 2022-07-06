@@ -109,7 +109,7 @@ const Form = styled.form`
         margin-bottom: 10px;
         font-size:1.25rem ;
         line-height: 1.75rem;
-        color:#cbd5e1 ;
+        color:${({ theme }) => theme.contactLabel};
       }
       textarea{
         margin-left:-11%;
@@ -124,12 +124,14 @@ const Form = styled.form`
       input[type='text'] {
         width:100% ;
         border-radius: 0.375rem;
+        border: 0.1em solid ${({ theme }) => theme.border};
         font-size:1rem ;
         
       }
       input[type='email'] {
           width:100% ;
           border-radius: 0.375rem;
+          border: 0.1em solid ${({ theme }) => theme.border};
           font-size:1rem ;
 
       }
