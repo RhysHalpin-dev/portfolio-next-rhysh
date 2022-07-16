@@ -3,12 +3,17 @@ import styled from 'styled-components';
 
 const ProjectCard = (props) => {
   const {
-    details: { _id, name, img, description, tags, git, preview },
+    details: { _id, name, img, description, tags, git, preview, dev },
   } = props;
   //console.log(props);
   return (
     <Card key={_id}>
-      {/*<p className='cardName'>id: {props.details._id}</p>*/}
+      {/*dev === true -> in development, dev === false -> Refactor, dev === null -> complete project*/}
+      {dev === null ? null : dev === true ? (
+        <Dev>In Development</Dev>
+      ) : (
+        <Dev>Major Refactor</Dev>
+      )}
       <CardName>{name}</CardName>
       <CardImg> {img}</CardImg>
       <p className="cardDesc">{description}</p>
@@ -38,7 +43,23 @@ const ProjectCard = (props) => {
 
 export default ProjectCard;
 
+const Dev = styled.div`
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  position: relative;
+  transform: rotate(37deg);
+  margin-top: 1rem;
+  margin-left: 73%;
+  color: ${({ theme }) => theme.heading};
+  background-color: #fafafa;
+  border: 2px solid ${({ theme }) => theme.heading};
+  width: 13rem;
+  overflow: hidden;
+  text-align: center;
+`;
+
 const Card = styled.div`
+  overflow: hidden;
+  position: relative;
   border: 3px solid ${({ theme }) => theme.text};
   padding: 10px;
   width: 18.75rem;

@@ -22,7 +22,8 @@ const totalProjects = [{
     description: `A Ticketing system capable of tracking bugs and progress across multiple software engineering projects. Users can be assinged to multiple project areas by system admins. Created using Typescript, React and Golang`,
     tags: [typeScriptImg, reactImg, golangImg],
     git: 'https://github.com/RhysHalpin-dev/bug-tracker',
-    preview: ''
+    preview: '',
+    dev: true
 }, {
     _id: 2,
     img: <Image alt='test' src={covid} />,
@@ -31,7 +32,8 @@ const totalProjects = [{
         logging, monitring and admin capabilties `,
     tags: [htmlImg, reactImg, pythonImg, raspImg, mongoImg],
     git: 'https://github.com/RhysHalpin-dev',
-    preview: ''
+    preview: 'https://covid-clock-system.netlify.app/',
+    dev: false
 }, {
     _id: 3,
     img: <Image alt='test' src={portfolio} />,
@@ -39,7 +41,8 @@ const totalProjects = [{
     description: 'This Front-end portfolio site developed using Next JS and styled components featuring dark mode accessibility and Résumé',
     tags: [htmlImg, reactImg],
     git: 'https://github.com/RhysHalpin-dev',
-    preview: ''
+    preview: '',
+    dev: null
 }, /*{
     _id: 4,
     img: <Image alt='test' src={test} />,
@@ -56,7 +59,8 @@ const totalProjects = [{
     description: `Web application, presenting information about an academic conference including Schedule, content and Authors attending the . Consists of a web API created using PHP and a Front end React JS application. SQlite`,
     tags: [reactImg, phpImg],
     git: 'https://github.com/RhysHalpin-dev/KF6012-web-app',
-    preview: ''
+    preview: 'http://unn-w15020067.newnumyspace.co.uk/KF6012/part2/',
+    dev: null
 }]
 
 export { totalProjects }
