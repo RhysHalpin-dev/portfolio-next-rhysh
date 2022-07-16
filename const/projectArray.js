@@ -27,7 +27,7 @@ const totalProjects = [{
 }, {
     _id: 2,
     img: <Image alt='test' src={covid} />,
-    name: 'Covid entry/exit system with monitoring web portal',
+    name: 'Covid Clock-In system with monitoring web portal',
     description: `Attendance system capable of measuring the users temperature for granting or rejecting entry based on covid temprature thresholds. web app integration for activity
         logging, monitring and admin capabilties `,
     tags: [htmlImg, reactImg, pythonImg, raspImg, mongoImg],
